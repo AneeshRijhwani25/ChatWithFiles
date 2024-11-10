@@ -1,8 +1,8 @@
-import axios from "axios"; 
+import axios from "axios";
 
 //Defining the API URL
-const API_URL = "http://localhost:4000/api/pdf";
-
+const API_URL ="/api/pdf";
+console.log("API: " + API_URL)
 //uploadFile Function
 export const uploadFile = async (file) => {
   try {
