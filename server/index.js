@@ -10,7 +10,9 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // Middleware setup
-app.use(cors()); //frontend applications to access this API.
+app.use(cors({
+  origin: ['http://localhost:3000']
+})); //frontend applications to access this API.
 app.use(express.json()); //Parses incoming JSON payloads, allowing the server to handle JSON-formatted requests, which is typical in REST APIs.
 
 // Database connection

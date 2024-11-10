@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //Defining the API URL
-const API_URL ="/api/pdf";
+const API_URL ="https://backend-chat-with-file.vercel.app/api/pdf";
 console.log("API: " + API_URL)
 //uploadFile Function
 export const uploadFile = async (file) => {
