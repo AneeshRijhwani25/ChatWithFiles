@@ -22,12 +22,11 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Failed to connect to MongoDB", err));
 
-  app.use("/", (req, res) => {
-    return res.send("Welcome to Chat with Files");
-  });
 // Defining Routes
+app.get("/", (req, res) => {
+  return res.send("Welcome to Chat with Files");
+});
 app.use("/api/pdf", pdfRoutes);
-
 //Starting the Server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
